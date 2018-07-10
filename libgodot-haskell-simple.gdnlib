@@ -1,0 +1,15 @@
+[general]
+
+singleton=false
+load_once=true
+symbol_prefix="godot_"
+
+[entry]
+
+Windows.64="res://godot-haskell-simple.dll"
+X11.64="res://libgodot-haskell-simple.so"
+
+[dependencies]
+
+Windows.64=[]
+X11.64=[]
