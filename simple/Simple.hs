@@ -33,17 +33,18 @@ foreign export ccall godot_gdnative_terminate :: GodotGdnativeTerminateOptionsPt
 godot_nativescript_init :: GdnativeHandle -> IO ()
 godot_nativescript_init desc = do
   putStrLn "nativescript init"
-  registerClass desc "TestClass" "Node" (\obj -> return (TestClass obj (show obj))) (\_ _ -> return ())
-  registerMethod desc "TestClass" "do_a_thing" GodotMethodRpcModeDisabled $
-    \_ t@(TestClass obj str) _ -> do
-      putStrLn str
+  -- Replace with SIMPLE class
+  -- registerClass desc "TestClass" "Node" (\obj -> return (TestClass obj (show obj))) (\_ _ -> return ())
+  -- registerMethod desc "TestClass" "do_a_thing" GodotMethodRpcModeDisabled $
+  --   \_ t@(TestClass obj str) _ -> do
+  --     putStrLn str
       
-      str <- Godot.get_class t >>= fromLowLevel
-      putStr "Godot.get_class is "
-      putStrLn $ T.unpack str
+  --     str <- Godot.get_class t >>= fromLowLevel
+  --     putStr "Godot.get_class is "
+  --     putStrLn $ T.unpack str
 
-      outStr <- toLowLevel (T.pack "i did a thing")
-      toLowLevel (VariantString outStr)
+  --     outStr <- toLowLevel (T.pack "i did a thing")
+  --     toLowLevel (VariantString outStr)
 
 
 foreign export ccall godot_nativescript_init :: GdnativeHandle -> IO ()
