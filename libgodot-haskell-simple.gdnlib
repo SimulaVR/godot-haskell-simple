@@ -8,8 +8,10 @@ symbol_prefix="godot_"
 
 Windows.64="res://godot-haskell-simple.dll"
 X11.64="res://libgodot-haskell-simple.so"
+OSX.64="res://libgodot-haskell-simple.dylib"
 
 [dependencies]
 
 Windows.64=[]
 X11.64=[]
+OSX.64=[]
